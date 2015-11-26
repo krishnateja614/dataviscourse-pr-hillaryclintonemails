@@ -37,7 +37,7 @@ vcorp <- tm_map(vcorp, removeWords, stopwords("english"))
 
 #ccorp<-0
 docterm_mat = DocumentTermMatrix(vcorp)
-sparse = removeSparseTerms(docterm_mat, 0.95) #NOTE: Don't lower this value otherwise will make the system hang 
+#sparse = removeSparseTerms(docterm_mat, 0.95) #NOTE: Don't lower this value otherwise will make the system hang 
 sparse=docterm_mat
 drop_inds = which(rowSums(as.matrix(sparse))==0)
 sparse = sparse[-drop_inds,]
