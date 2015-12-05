@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../favicon.ico">
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://w2ui.com/src/w2ui-1.4.2.min.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://w2ui.com/src/w2ui-1.4.2.min.js"></script>
+    <title>Vizualization of Hillary Clinton Email Dataset</title>
+    <style>
+
+        #xAxis path,
+        #yAxis path {
+            fill: none;
+            stroke: black;
+        }
+
+        h2 {
+            margin: 10px;
+        }
+
+        div {
+            display: inline-block;
+            border: 1px solid lightgray;
+            margin: 10px;
+        }
+
+        h1,h3,h2 {
+            font-family:Georgia,"Times New Roman",serif;
+            text-align: center ;
+        }
+        
+        div,
+        span {
+            padding: 10px;
+        }
+
+        path.link {
+            fill: none;
+            stroke: #666;
+            stroke-width: 1.5px;
+        }
+
+        circle {
+            fill: #ccc;
+            stroke: #fff;
+            stroke-width: 1.5px;
+        }
+
+        text {
+            fill: #000;
+            font: 10px sans-serif;
+            pointer-events: none;
+        }
+
+        body {
+            font: 10px sans-serif;
+        }
+
+        .chart {
+            background: #fff;
+        }
+
+        p {
+            font: 12px helvetica;
+        }
+
+
+        .axis path, .axis line {
+            fill: none;
+            stroke: #000;
+            stroke-width: 2px;
+            shape-rendering: crispEdges;
+        }
+
+        button {
+            position: absolute;
+            right: 50px;
+            top: 10px;
+        }
+        .node > text{
+            font-family:Georgia,"Times New Roman",serif;
+            font-weight: bold;
+        }
+        p{
+            text-align: center;
+        }
+		td{
+            font-family:Georgia,"Times New Roman",serif;
+            text-align: left;
+            font-size: 110%;
+        }
+
+        .btn{
+            position: absolute;
+            top :50%;
+        }
+        .popupLabels{
+            text-align: left;
+            font-family: Georgia,"Times New Roman",serif;
+            font-weight: bold;
+        }
+
+        #table_heading{
+            font-weight: bold;
+            font-family:Georgia,"Times New Roman",serif;
+            text-align: left;
+            font-size: 150%;
+        }
+
+        #popupContent{
+            font-family: Georgia,"Times New Roman",serif;
+            font-size: 200%;
+        }
+        #popupTitle{
+            font-family: Georgia,"Times New Roman",serif;
+            font-size: 120%;
+            text-align: center;
+        }
+
+    </style>
+    <script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js" type="text/javascript"></script>
+
+    <script src="js/bubblechartvis.js"></script>
+    <script src="js/emailtextvis.js"></script>
+    <script src="js/streamgraphvis.js"></script>
+    <script src="js/wordcloudvis.js"></script>
+    <script src="js/cloud.min.js"></script>
+    <script src="js/ie.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    
+        <h1>Vizualization of Hillary Clinton Email Dataset</h1>
+        <h3>
+            <span>Murali Krishna Teja - u1006392</span>
+            <span>Vinitha Yaski - u1009987</span>
+            <span>Rohan Kohli - u0878757</span>
+        </h3>
+        <br/>
+        <hr/>
+        <span id="info"></span>
+        <br/>
+        <center>
+        
+        <div style="border-style: hidden">
+            <h2>Email categories</h2>
+            <svg width="1800" height="1000" id="bubbleChartVis">
+            </svg>
+        </div>
+
+        <div id="streamGraphVisDiv" style="border-style: hidden">
+            <h2>Most frequent terms in category</h2>
+            <svg width="900" height="400" id="streamGraphVis">
+
+            </svg>
+            <div id = "tooltip" style="height:69px; width:150px;"  style="visibility:hidden;"> 
+                <p> <br><br><br> </p>
+            </div> 
+            
+        </div>
+
+         <div id = 'wordCloudVis' style="border-style: hidden" >
+            <h2>Frequently interacting person ID</h2>
+            <svg width="500" height="450">
+
+            </svg>
+        </div>
+        
+            <div>
+                <nav id = "mail_header" class="navbar navbar-default ">
+
+                </nav>
+                <div class="container" id ='email_list' style="overflow-y: scroll; height:400px;">
+
+                </div>
+            </div>
+        </div>
+        </center>
+        <script src="js/script.js"></script>
+    </body>
+</html>
