@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="http://w2ui.com/src/w2ui-1.4.2.min.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://w2ui.com/src/w2ui-1.4.2.min.js"></script>
-    <title>Vizualization of Hillary Clinton Email Dataset</title>
+    <title>Visualization of Hillary Clinton Email Dataset</title>
     <style>
 
         #xAxis path,
@@ -36,7 +36,10 @@
             font-family:Georgia,"Times New Roman",serif;
             text-align: center ;
         }
-        
+        h4 {
+            font-family:Georgia,"Times New Roman",serif;
+            text-align: left ;
+        }
         div,
         span {
             padding: 10px;
@@ -154,7 +157,28 @@
         <hr/>
         <span id="info"></span>
         <br/>
+        <div style="border-style: hidden">
+                <h4> <b> INTRODUCTION: </b>
+	         Our project aims to visualize the most important topics that Secretary Hillary Clinton communicated in her
+	         emails. Being a large dataset of over 4 years of emails, we believe this would be a helpful tool for anyone who wanted
+	         to explore these emails based on their relevant subjects. <br>	
+	         
+	         The first visualization element is the force directed graph which contains the most frequently occurring words
+	         for each topic. When a particular topic is chosen from this graph, the stream graph gives the temporal relationship
+	         with the most frequently occurring words within the topic selected. Each of the individual streams represents a word in
+	         the topic, the size of the stream depicts the frequency of that word used per month. <br>
+
+		In the third visualization which is a word cloud, users can also see the most frequently mailed people in that topic. At the
+		bottom we have an email text box which updates to show the list of emails concerning the topic. The user can also view the
+		full content of the email by clicking on them.
+	        </h4>
+	</div>        
+        
+        <br/>
+        <hr/>
+        
         <center>
+        
         
         <div style="border-style: hidden">
             <h2>Email categories</h2>
@@ -190,6 +214,57 @@
             </div>
         </div>
         </center>
+        
+        <br/>
+        <hr/>
+        
+        <div style="border-style: hidden">
+	        <br>
+	        <h4> 
+	        <b> RESULTS: </b> 
+	        	
+	        	The visualizations can answer a wide variety of questions such as “What are the most
+important topics discussed by Hillary Clinton in general?”, “What word in a particular
+topic she seems to talk more in a particular month of interest?”, “What is her emails
+content in topic named “Koch brothers?”. <br>
+ The visualizations also give us some interesting insights such as that she considers
+some people namely Bill Clinton, her personal staffer Huma abedin extremely
+important because they appear in the word cloud for multiple topics and with high
+frequency which is depicted by the large size of their names in the word cloud. <br>
+The presence of the email textbox actually serves us two ways. It not only gives us a
+way to directly validate our results by clicking on the emails and seeing the content but
+also it will be interesting for users to check on the emails if they find the subject of the
+email interesting
+	        	
+	        </h4>	
+	        
+	        <br>
+	        <h4> 
+	        <b> PROJECT SCREEN CAST: </b> 
+	        </h4>
+	        
+	        <br>
+	        <h4> 
+	        <iframe width="560" height="315" src="https://www.youtube.com/embed/Owel9JbsFlI" frameborder="0" allowfullscreen></iframe>
+	        </h4>
+	        
+	        
+	        <br>
+	        <h4> 
+	        <b> <a href="https://www.kaggle.com/c/hillary-clinton-emails/data">Link </a></b>
+	         to the process book 
+	        
+	        </h4>	
+        	
+        	<br>
+	        <h4> 
+	        <b> <a href="https://www.kaggle.com/c/hillary-clinton-emails/data">Link </a></b>
+	         to the email dataset 
+	        
+	        </h4>	
+        
+        </div>
+        
         <script src="js/script.js"></script>
     </body>
 </html>
